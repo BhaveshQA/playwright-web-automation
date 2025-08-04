@@ -9,7 +9,7 @@ This repository contains a **modern web automation framework** built using [Play
 - 🔹 Built with **Playwright (JavaScript/Node.js)** for modern, fast, and reliable browser automation
 - 🔹 Uses **Page Object Model (POM)** for better code reusability and maintainability
 - 🔹 Supports **cross-browser testing** (Chromium, Firefox, WebKit)
-- 🔹 Test cases include **Login**,  **API Method [GET/POST/PUT/DELETE]*
+- 🔹 Test cases include **Login**,  **API Method [GET/POST/PUT/DELETE]**
 - 🔹 Command-line execution using `npx playwright test`
 - 🔹 Generates **HTML Reports** after each run
 - 🔹 Includes reusable selectors and test data
