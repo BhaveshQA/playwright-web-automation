@@ -17,7 +17,7 @@ This repository contains a **modern web automation framework** built using [Play
 ---
 
 ## 📁 Folder Structure
-`
+```
 playwright-web-automation/
 ├── tests/ # Test specs for user flows
 ├── pages/ # Page Object classes
@@ -25,7 +25,7 @@ playwright-web-automation/
 ├── reports/ # Playwright test reports (auto-generated)
 ├── playwright.config.js # Global configuration file
 ├── package.json # Project dependencies and scripts
-`
+```
 yaml
 Always show details
 
