@@ -1,7 +1,9 @@
 const { test: base } = require("@playwright/test");
+const { CheckboxPage } = require("../pages/CheckboxPage");
 const { LoginPage } = require("../pages/LoginPage");
+const { WebTablePage } = require("../pages/WebTablePage");
 
-const baseURL = "https://the-internet.herokuapp.com/login";
+const baseURL = "https://the-internet.herokuapp.com/";
 
 exports.test = base.extend({
   page: async ({ page }, use) => {
@@ -16,5 +18,14 @@ exports.test = base.extend({
   loginPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
     await use(loginPage);
+  },
+  WebTablePage: async ({ page }, use) => {
+    const webpageObj = new WebTablePage(page);
+    await use(webpageObj);
+  },
+
+  CheckboxPage: async ({ page }, use) => {
+    const checkboxpage = new CheckboxPage(page);
+    await use(checkboxpage);
   },
 });
