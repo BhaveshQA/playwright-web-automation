@@ -2,6 +2,7 @@ const { test: base } = require("@playwright/test");
 const { CheckboxPage } = require("../pages/CheckboxPage");
 const { LoginPage } = require("../pages/LoginPage");
 const { WebTablePage } = require("../pages/WebTablePage");
+const { FrameActionPage } = require("../pages/FramesPage");
 
 const baseURL = "https://the-internet.herokuapp.com/";
 
@@ -27,5 +28,9 @@ exports.test = base.extend({
   CheckboxPage: async ({ page }, use) => {
     const checkboxpage = new CheckboxPage(page);
     await use(checkboxpage);
+  },
+  FrameActionPage: async ({ page }, use) => {
+    const framespage = new FrameActionPage(page);
+    await use(framespage);
   },
 });
