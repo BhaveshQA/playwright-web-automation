@@ -1,8 +1,0 @@
-Navigated to base URL: https://the-internet.herokuapp.com/
-currentURL: https://the-internet.herokuapp.com/nested_frames
-Left side frame text: 
-    LEFT
-    
-
-
-Test finished. Can add cleanup if needed.

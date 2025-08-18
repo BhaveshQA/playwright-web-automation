@@ -1,2 +1,0 @@
-Navigated to base URL: https://the-internet.herokuapp.com/
-Test finished. Can add cleanup if needed.
