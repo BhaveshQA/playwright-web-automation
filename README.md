@@ -33,6 +33,9 @@ Always show details
 ## 🧪 Sample Test Scenarios
 
 - ✅ Verify user login with valid credentials
+- ✅ Verify the use case for checkbox uncheck/check
+- ✅ Verify the use case for the Web table
+- ✅ Verify the use case for the frameset [ html frameset ]
 - ✅ Add product to cart and validate cart item count
 - ✅ Complete checkout flow and assert confirmation message
 - ✅ Search for a product and validate search results
