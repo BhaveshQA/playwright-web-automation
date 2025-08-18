@@ -50,7 +50,7 @@ Always show details
 npm install
 
 # Run tests (default browser)
-npx playwright test
+npx playwright test tests/FramesPageTest.spec.js --config=config/playwright.config.js --project=chromium
 
 # Run tests with UI (headed mode)
 npx playwright test --headed
