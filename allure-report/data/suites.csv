@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","12240","Print text of the sub-frames","chromium","Sun Aug 17 21:47:53 IST 2025","passed","Sun Aug 17 21:48:05 IST 2025","Frame component automation","FramesPageTest.spec.js","",""
+"","7625","Print Name and URL of all the sub-frames","chromium","Sun Aug 17 21:47:53 IST 2025","passed","Sun Aug 17 21:48:01 IST 2025","Frame component automation","FramesPageTest.spec.js","",""
+"","7330","Print text from the single left frame","chromium","Sun Aug 17 21:47:53 IST 2025","passed","Sun Aug 17 21:48:01 IST 2025","Frame component automation","FramesPageTest.spec.js","",""

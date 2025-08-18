@@ -1,42 +1,37 @@
-const { test } = require("../utils/BaseTest");
-const { expect } = require("@playwright/test");
-//const { LoginPage } = require("../pages/LoginPage");
-const { CommonUtils } = require("../utils/CommonUtils");
-const loginData = require("../test-data/loginData.json");
+import { test, expect } from "../utils/BaseTest.js";
+import { CommonUtils } from "../utils/CommonUtils.js";
+import loginData from "../test-data/loginData.json" assert { type: "json" };
 
-test.describe("Login test functionality", async () => {
-  //let loginpage;
-  //loginpage = new LoginPage(page);
-  /* test.beforeEach("URL & Object Setup", async ({ page }) => {
-    loginpage = new LoginPage(page);
-    CommonUtils.logStep("URL Launch");
-    await page.goto("https://the-internet.herokuapp.com/login");
-  }); */
-
-  test("Login in valid input", async ({ page }) => {
-    await loginpage.userLogin(
+// ✅ All tests grouped under describe
+test.describe("Login test functionality", () => {
+  test("Login with valid input", async ({ loginPage }) => {
+    await loginPage.userLogin(
       loginData.validUser.username,
       loginData.validUser.password
     );
-    const sucemsg = await loginpage.getAlertMessage();
+    const sucemsg = await loginPage.getAlertMessage();
     expect(sucemsg).toContain("You logged into a secure area!");
   });
 
-  test("Login with Invalid username and password", async ({ page }) => {
-    await loginpage.userLogin("invalid", "invalid!");
-    const errMsg = await loginpage.getAlertMessage();
+  test("Login with Invalid username and password", async ({ loginPage }) => {
+    await loginPage.userLogin("invalid", "invalid!");
+    const errMsg = await loginPage.getAlertMessage();
     expect(errMsg).toContain("Your username is invalid!");
   });
 
-  test("Login with valid username and invalid password", async ({ page }) => {
-    await loginpage.userLogin("tomsmith", "invalid");
-    const errMsg = await loginpage.getAlertMessage();
+  test("Login with valid username and invalid password", async ({
+    loginPage,
+  }) => {
+    await loginPage.userLogin("tomsmith", "invalid");
+    const errMsg = await loginPage.getAlertMessage();
     expect(errMsg).toContain("Your password is invalid!");
   });
 
-  test("Login with Invalid username and Valid password", async ({ page }) => {
-    await loginpage.userLogin("invalid", "SuperSecretPassword!");
-    const errMsg = await loginpage.getAlertMessage();
+  test("Login with Invalid username and Valid password", async ({
+    loginPage,
+  }) => {
+    await loginPage.userLogin("invalid", "SuperSecretPassword!");
+    const errMsg = await loginPage.getAlertMessage();
     expect(errMsg).toContain("Your username is invalid!");
   });
 

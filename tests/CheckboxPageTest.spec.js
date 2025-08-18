@@ -1,7 +1,7 @@
-const { test } = require("../utils/BaseTest");
-const { expect } = require("@playwright/test");
+import { test } from "../utils/BaseTest.js";
+import { expect } from "@playwright/test";
 
-test.describe("Checkbox page verification", async () => {
+test.describe("Checkbox page verification", () => {
   test("Validate checkbox selected or deselected", async ({ CheckboxPage }) => {
     await CheckboxPage.isCheckboxCheckUnCheck();
   });

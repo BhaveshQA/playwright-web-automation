@@ -27,8 +27,14 @@ export default defineConfig({
     [
       "html",
       {
-        outputFolder: path.resolve(__dirname, "../reports"),
+        outputFolder: path.resolve(process.cwd(), "reports", "html-report"),
         open: "never",
+      },
+    ],
+    [
+      "allure-playwright",
+      {
+        outputFolder: path.resolve(process.cwd(), "reports", "allure-results"),
       },
     ],
   ],

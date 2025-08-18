@@ -1,4 +1,4 @@
-class LoginPage {
+export class LoginPage {
   constructor(page) {
     this.page = page;
     this.usernameInput = page.locator("#username");
@@ -13,12 +13,12 @@ class LoginPage {
     await this.passwordInput.fill(password);
     await this.loginBtn.click();
   }
+
   async getAlertMessage() {
     return this.errorSussMsg.textContent();
   }
+
   async clickLogout() {
     await this.logoutBtn.click();
   }
 }
-
-module.exports = { LoginPage };
