@@ -1,6 +1,7 @@
-const { test } = require("../utils/BaseTest");
+import { test } from "../utils/BaseTest.js";
 
-test.describe("Frame component automation", async () => {
+
+test.describe("Frame component automation", () => {
   test("Print text from the single left frame", async ({ FrameActionPage }) => {
     await FrameActionPage.verifyTextFromSingleFrame();
   });

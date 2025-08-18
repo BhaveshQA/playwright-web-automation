@@ -1,0 +1,10 @@
+Navigated to base URL: https://the-internet.herokuapp.com/
+currentURL: https://the-internet.herokuapp.com/nested_frames
+Total frames: 6
+Frame:  | No body found
+Frame: frame-top | No body found
+Frame: frame-bottom | Text: BOTTOM
+Frame: frame-left | Text: LEFT
+Frame: frame-middle | Text: MIDDLE
+Frame: frame-right | Text: RIGHT
+Test finished. Can add cleanup if needed.

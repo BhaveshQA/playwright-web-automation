@@ -1,4 +1,4 @@
-class WebTablePage {
+export class WebTablePage {
   constructor(page) {
     this.page = page;
     this.WebTableLink = page.locator('a[href="/tables"]');
@@ -11,7 +11,6 @@ class WebTablePage {
 
     const rowCount = await this.rows.count();
     console.log("Total Rows:", rowCount);
-    // const rowCount = await this.rows.count();
 
     for (let i = 0; i < rowCount; i++) {
       let row = this.rows.nth(i);
@@ -21,10 +20,9 @@ class WebTablePage {
       let rowData = "";
       for (let j = 0; j < columnsCount; j++) {
         let text = await columns.nth(j).textContent();
-        rowData += text?.trim() + " | ";
+        rowData += (text?.trim() ?? "") + " | ";
       }
       console.log(`Row ${i + 1}: ${rowData}`);
     }
   }
 }
-module.exports = { WebTablePage };
