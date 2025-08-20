@@ -4,6 +4,7 @@ import CheckboxPage from "../pages/CheckboxPage.js";
 import LoginPage from "../pages/LoginPage.js";
 import WebTablePage from "../pages/WebTablePage.js";
 import FrameActionPage from "../pages/FramesPage.js";
+import AlertHandle from "../pages/alertHandlePage.js";
 
 const baseURL = "https://the-internet.herokuapp.com/";
 
@@ -43,5 +44,10 @@ export const test = base.extend({
   FrameActionPage: async ({ page }, use) => {
     const framespage = new FrameActionPage(page);
     await use(framespage);
+  },
+
+  AlertHandle: async ({ page }, use) => {
+    const alertpage = new AlertHandle(page);
+    await use(alertpage);
   },
 });
