@@ -5,6 +5,7 @@ import LoginPage from "../pages/LoginPage.js";
 import WebTablePage from "../pages/WebTablePage.js";
 import FrameActionPage from "../pages/FramesPage.js";
 import AlertHandle from "../pages/alertHandlePage.js";
+import KeyAction from "../pages/KeyActionPage.js";
 
 const baseURL = "https://the-internet.herokuapp.com/";
 
@@ -49,5 +50,10 @@ export const test = base.extend({
   AlertHandle: async ({ page }, use) => {
     const alertpage = new AlertHandle(page);
     await use(alertpage);
+  },
+
+  KeyAction: async ({ page }, use) => {
+    const keyaction = new KeyAction(page);
+    await use(keyaction);
   },
 });
