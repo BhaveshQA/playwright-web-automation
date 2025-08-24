@@ -6,6 +6,7 @@ import WebTablePage from "../pages/WebTablePage.js";
 import FrameActionPage from "../pages/FramesPage.js";
 import AlertHandle from "../pages/alertHandlePage.js";
 import KeyAction from "../pages/KeyActionPage.js";
+import MouseAction from "../pages/MouseHoverActionPage.js";
 
 const baseURL = "https://the-internet.herokuapp.com/";
 
@@ -55,5 +56,10 @@ export const test = base.extend({
   KeyAction: async ({ page }, use) => {
     const keyaction = new KeyAction(page);
     await use(keyaction);
+  },
+
+  MouseAction: async ({ page }, use) => {
+    const mouseaction = new MouseAction(page);
+    await use(mouseaction);
   },
 });

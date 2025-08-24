@@ -15,6 +15,10 @@ export async function isElementVisible(locator) {
   return await locator.isVisible();
 }
 
+export async function clickOnElement(locator) {
+  await locator.click();
+}
+
 /**
  * Wait until element is visible
  */
