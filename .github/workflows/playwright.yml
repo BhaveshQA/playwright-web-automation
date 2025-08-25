@@ -3,7 +3,9 @@ name: Playwright Tests
 on:
   push: # har branch pe chalega
     branches:
-      - "*" # matlab koi bhi branch
+      #- "*" # matlab koi bhi branch
+      - main
+      - cisetup
   pull_request: # PR banate hi chalega
     branches:
       - main
