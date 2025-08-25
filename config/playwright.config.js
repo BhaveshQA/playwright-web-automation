@@ -1,3 +1,7 @@
+console.log(
+  "🚀 Running Playwright with CONFIG from config/playwright.config.js"
+);
+
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import path from "path";
