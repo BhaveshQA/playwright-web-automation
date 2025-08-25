@@ -1,7 +1,3 @@
-console.log(
-  "🚀 Running Playwright with CONFIG from config/playwright.config.js"
-);
-
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import path from "path";
@@ -51,7 +47,7 @@ export default defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure", //test-results/your-test-name/chromium/screenshot.png
     video: "on-first-retry", // or 'on' to always record, test-results/your-test-name/chromium/video.webm
-    headless: true,
+    headless: false,
     viewport: null,
     channel: "chrome",
     launchOptions: {

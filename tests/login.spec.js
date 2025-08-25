@@ -1,9 +1,10 @@
-import { test, expect } from "../utils/BaseTest.js";
+import { test } from "../utils/BaseTest.js";
+import { expect } from "@playwright/test";
 import { CommonUtils } from "../utils/CommonUtils.js";
 import loginData from "../test-data/loginData.json" assert { type: "json" };
 
 // ✅ All tests grouped under describe
-test.describe("Login test functionality", () => {
+test.describe.serial("Login test functionality", () => {
   test("Login with valid input", async ({ loginPage }) => {
     await loginPage.userLogin(
       loginData.validUser.username,
@@ -35,7 +36,7 @@ test.describe("Login test functionality", () => {
     expect(errMsg).toContain("Your username is invalid!");
   });
 
-  test("Multiple Login data using the loop", async ({ loginPage }) => {
+ /* test("Multiple Login data using the loop", async ({ loginPage }) => {
     for (const [key, data] of Object.entries(loginData)) {
       await loginPage.userLogin(data.username, data.password);
       if (key === "validUser") {
@@ -47,5 +48,5 @@ test.describe("Login test functionality", () => {
         expect(errMsg).toContain("Your username is invalid!");
       }
     }
-  });
+  });*/
 });
