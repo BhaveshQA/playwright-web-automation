@@ -47,7 +47,7 @@ export default defineConfig({
     trace: "on-first-retry",
     screenshot: "only-on-failure", //test-results/your-test-name/chromium/screenshot.png
     video: "on-first-retry", // or 'on' to always record, test-results/your-test-name/chromium/video.webm
-    headless: false,
+    headless: true,
     viewport: null,
     channel: "chrome",
     launchOptions: {
