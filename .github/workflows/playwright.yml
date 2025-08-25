@@ -29,3 +29,5 @@ jobs:
 
       - name: Run Playwright tests
         run: npx playwright test --config=config/playwright.config.js --project=chromium
+        env:
+        CI: true
