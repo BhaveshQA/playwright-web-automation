@@ -1,6 +1,6 @@
 import { expect } from "@playwright/test";
 
-export class CheckboxPage {
+export default class CheckboxPage {
   constructor(page) {
     this.page = page;
     this.checkboxpageLink = page.locator('a[href="/checkboxes"]');

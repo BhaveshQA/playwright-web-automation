@@ -1,6 +1,7 @@
-export class LoginPage {
+export default class LoginPage {
   constructor(page) {
     this.page = page;
+    this.clickOnLoginMenu = page.locator('a[href="/login"]');
     this.usernameInput = page.locator("#username");
     this.passwordInput = page.locator("#password");
     this.loginBtn = page.locator('button[type="submit"]');
@@ -9,6 +10,7 @@ export class LoginPage {
   }
 
   async userLogin(user, password) {
+    await this.clickOnLoginMenu.click();
     await this.usernameInput.fill(user);
     await this.passwordInput.fill(password);
     await this.loginBtn.click();

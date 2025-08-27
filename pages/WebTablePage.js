@@ -1,4 +1,4 @@
-export class WebTablePage {
+export default class WebTablePage {
   constructor(page) {
     this.page = page;
     this.WebTableLink = page.locator('a[href="/tables"]');
