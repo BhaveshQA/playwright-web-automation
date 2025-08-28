@@ -1,69 +1,92 @@
-# Playwright Web Automation Framework 🚀
+#  Playwright Web Automation
 
-This repository contains a **modern web automation framework** built using [Playwright](https://playwright.dev/). It is designed to test user flows on a sample e-commerce website and showcases best practices in structuring, scripting, and reporting.
+This repository demonstrates Playwright-based web automation with JavaScript, following the Page Object Model (POM) design pattern. It includes reusable utilities, test data management, CI/CD pipeline setup, and reporting.
 
----
+## 🚀 Features
 
-## 📌 Features
+Cross-browser testing: Chromium, Firefox, WebKit
 
-- 🔹 Built with **Playwright (JavaScript/Node.js)** for modern, fast, and reliable browser automation
-- 🔹 Uses **Page Object Model (POM)** for better code reusability and maintainability
-- 🔹 Supports **cross-browser testing** (Chromium, Firefox, WebKit)
-- 🔹 Test cases include **Login**,  **API Method [GET/POST/PUT/DELETE]**
-- 🔹 Command-line execution using `npx playwright test`
-- 🔹 Generates **HTML Reports** after each run
-- 🔹 Includes reusable selectors and test data
+Page Object Model (POM) for maintainability
 
----
+Reusable utilities for actions (keyboard, mouse hover, etc.)
 
-## 📁 Folder Structure
+Test data management with dedicated folder
+
+Allure & HTML reports for execution results
+
+CI/CD integration with GitHub Actions
+
+ES6 standards for modern, clean code
+
+
 ```
-playwright-web-automation/
-├── tests/ # Test specs for user flows
-├── pages/ # Page Object classes
-├── data/ # Test data files (e.g., login credentials)
-├── reports/ # Playwright test reports (auto-generated)
-├── playwright.config.js # Global configuration file
-├── package.json # Project dependencies and scripts
+📂 Project Structure
+.
+├── .github/workflows/       # CI/CD workflow (GitHub Actions)
+├── .vscode/                 # VSCode settings
+├── allure-report/           # Allure reports (generated)
+├── config/                  # Playwright configs (env, yml)
+├── pages/                   # Page Object Model classes
+├── reports/html-report/     # Playwright HTML reports
+├── test-data/               # External test data (JSON, CSV, etc.)
+├── tests-examples/          # Sample Playwright tests
+├── tests/                   # Actual project test cases
+├── utils/                   # Utility functions (keyboard, mouse, helpers)
+├── .gitignore               # Ignored files
+├── README.md                # Project documentation
+├── package.json             # Dependencies & scripts
+├── package-lock.json        # Dependency lock file
 ```
-yaml
-Always show details
 
-
-## 🧪 Sample Test Scenarios
-
-- ✅ Verify user login with valid credentials
-- ✅ Verify the use case for checkbox uncheck/check
-- ✅ Verify the use case for the Web table
-- ✅ Verify the use case for the frameset [ html frameset ]
-- ✅ Add product to cart and validate cart item count
-- ✅ Complete checkout flow and assert confirmation message
-- ✅ Search for a product and validate search results
-
----
-
-
-## ⚙️ Setup & Run Locally
-
-```bash
-# Install dependencies
+## 🧪 Running Tests
+Install dependencies
 npm install
+npx playwright install
 
-# Run tests (default browser)
-npx playwright test tests/FramesPageTest.spec.js --config=config/playwright.config.js --project=chromium
+Run all tests
+npx playwright test
 
-# Run tests with UI (headed mode)
+Run tests in headed mode
 npx playwright test --headed
 
-# Open the HTML report after execution
+Run tests in specific browser
+npx playwright test --project=chromium
+npx playwright test --project=firefox
+
+Run a specific test file
+npx playwright test tests/login.spec.js
+
+Run with Allure report
+npx playwright test --reporter=line,allure-playwright
+allure serve allure-results
+
+Run with HTML report
 npx playwright show-report
-📷 Reports
-HTML reports are auto-generated in the playwright-report/ folder after each test run.
 
-📬 Contact
-Created with ❤️ by Bhavesh Rathod
-📧 Email: engineerqa.bhavesh007@gmail.com
-🔗 GitHub: BhaveshQA
+## 📊 Reporting
 
-“Test automation is not just about speed — it’s about confidence, coverage, and clarity.”
+Allure Report → allure-report/
 
+HTML Report → reports/html-report/
+
+Both reporting options are available depending on your CI/CD or local debugging needs.
+
+## ⚙️ CI/CD Integration
+
+The repository includes GitHub Actions workflows (.github/workflows/) for continuous test execution on every push/PR.
+
+Tests run in parallel across browsers.
+
+Reports can be uploaded as artifacts.
+
+✅ Best Practices Used
+
+Page Object Model (POM) for clean separation of concerns
+
+Test data externalization for reusability
+
+Utilities for actions like mouse hover and keyboard events
+
+ES6 syntax for modern, maintainable code
+
+Config-driven test execution
